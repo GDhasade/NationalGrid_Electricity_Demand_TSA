@@ -55,13 +55,13 @@ The purpose of this project consist two parts:
         - Date: Date from 1/06/2011 to 24/09/2020 
         - uk_holidays: Consist True boolean value for UK public holiday date.
 
-2. Data Cleaning:
+**2. Data Cleaning:**
 - Check Null values
     - Zero null values present in dataset.
 - Check duplicate values
     - Found 59 duplicate rows (Added/Repeat because of daylight saving time change).
 
-3. EDA - Exploratory Data Analysis
+**3. EDA - Exploratory Data Analysis**
 **a. Daily Electricity Demand**
 
 <img src="Images/1.png" height="400"/>
@@ -73,34 +73,34 @@ The purpose of this project consist two parts:
 <img src="Images/YearlyRegression.png" height="400"/>
 <img src="Images/YearlyTrend.png" height="400"/>
 
-**Analysis:** 
-    - Trend: 
-        - Intially i.e before 2012 till 2014 the electiricity demand trend is constant or higher as compared to current electricity demand.
+#### Analysis: 
+- Trend: 
+    - Intially i.e before 2012 till 2014 the electiricity demand trend is constant or higher as compared to current electricity demand.
         - After 2014 observed constant decrease in electricity demand.
         - Reason: Because Uk govt. start promoting other energy sources like domestic & commercial solar panels, smart devices at home and industries, etc.
         - Article (https://www.theguardian.com/business/2018/jan/30/uk-electricity-use-falling-economy-weather) appreciate UK govt and residents as they consume comparitively less electircity than other European countries.
-    - Regression Line:
-        - Regression line shows best fit hence indicate constant downtrend in electricity demand.
+- Regression Line:
+    - Regression line shows best fit hence indicate constant downtrend in electricity demand.
 
 **c. Monthly Electricity Demand Trend**
 
 <img src="Images/MonthlyTrend.png" height="400">
 <img src="Images/MonthlyRegression.png" height="400">
 
-**Analysis:**
-    - Trend: 
-        - Monthly demand helps to identify clear seasonal pattern.
-        - As this observation help while decomposing the time series.
-        - Data is seasonal with approximately decrease in magnitude demand.
-    - Regression Line:
-        - Shows best fit hence indicate constant downtrend in electricity demand with constant decrease in magnitude.
+#### Analysis:
+- Trend: 
+    - Monthly demand helps to identify clear seasonal pattern.
+    - As this observation help while decomposing the time series.
+    - Data is seasonal with approximately decrease in magnitude demand.
+- Regression Line:
+    - Shows best fit hence indicate constant downtrend in electricity demand with constant decrease in magnitude.
 
 **d. Daily Trend & Identify steep decrease electricity demand in 2018 & 2019**
 <img src="Images/DailyTrend2018.png" height="400">
 <img src="Images/DailyTrend2019.png" height="400">
 
-**Analysis:**
-    - There is an seasonal pattern during the year.
+#### Analysis:
+- There is an seasonal pattern during the year.
     - **In 2019:**
         - There is an steep decrease on 8th December, 2019.
         - Because there was an storm ATIYA, hence in many areas of uk face power cut for hours.
@@ -113,33 +113,33 @@ The purpose of this project consist two parts:
 <img src="Images/WeeklyTrend.png" height="400">
 <img src="Images/WeeklyRegression.png" height="400">
 
-**Analysis:**
-    - Trend: 
-        - Weekly demand visualization shows clear seasonal pattern as well as downtrend.
-        - Data is seasonal with approximately decrease in magnitude demand.
-    - Regression Line:
-        - Shows best fit hence indicate constant downtrend in electricity demand with constant decrease in magnitude.
+#### Analysis:
+- Trend: 
+    - Weekly demand visualization shows clear seasonal pattern as well as downtrend.
+    - Data is seasonal with approximately decrease in magnitude demand.
+- Regression Line:
+    - Shows best fit hence indicate constant downtrend in electricity demand with constant decrease in magnitude.
 
 **f. Holiday Impact on Electiricity Demand**
 
 <img src="Images/HolidayImpact2018.png" height="400">
 <img src="Images/HolidayImpact2019.png" height="400">
 
-**Explanation:**
-    - Try to analyse for 2018 and 2019 data
+#### Explanation:
+- Try to analyse for 2018 and 2019 data
     - In 2018 & 2019:
         - As assumed, during holidays electricity demand has been decreased.
         - It's natural as many offices and manufacturing plants shutoff.
         - Hence electricity demand is less.
 
 
-##### DEVELOP:
+### DEVELOP:
 
-**1. Data preprocessing -  Outlier Handling**
+#### 1. Data preprocessing -  Outlier Handling**
 <img src="Images/OutlierCurve.png" height="400">
 
-**Explanation:**
-    - Suspect outliers at both end of box plot.
+#### Explanation:
+- Suspect outliers at both end of box plot.
     - Records Below Lower Quartile:
         - By for records below lower quartile has been imputed/handled by analysing 2 weeks data.
         - Impute with most common/mode value for that outlier.
@@ -151,44 +151,46 @@ The purpose of this project consist two parts:
         - Also for the whole month electricity demand is consistent.
         - Hence to adjust or handle this outlier we impute the mean/avg demand in whole month.
 
-**2. Statistical Test**
+#### 2. Statistical Test
 - To check data is normally distributed or not using - Shapiro-Wilk Test.
+
 <img src="Images/WithoutOutlier.png" height="400">
 
-**3. TIME SERIES FORECASTING MODEL**
+#### 3. TIME SERIES FORECASTING MODEL
 Followed below steps:
 
-**Step 1. Time Series Decomposition plot**
-    - Allow to identify Seasonality-Trend-Error/Remainder.
+#### Step 1. Time Series Decomposition plot
+- Allow to identify Seasonality-Trend-Error/Remainder.
+
 <img src="Images/Decomposition.png" height="400">
 
 
-**Step 2. Determine ARIMA terms**
-    - Check data is stationary or not:
-        - Performed Dicky-Fuller statistical test - found data is not stationary.
-        - To make it stationary:
-            - Took 2 time differencing to make data stationary.
+#### Step 2. Determine ARIMA terms
+- Check data is stationary or not:
+    - Performed Dicky-Fuller statistical test - found data is not stationary.
+- To make it stationary:
+    - Took 2 time differencing to make data stationary.
 
-**Stationary Data**
+#### Stationary Data
 
 <img src="Images/diff1sationary.png" height="400">
 <img src="Images/diff2stationary.png" height="400">
 
-**Step 3a. Term Identification & Train SARIMA Model**
+#### Step 3a. Term Identification & Train SARIMA Model
 - As our data is seasonal so we have to determine seasonal as well as non seasonal parameters - Inshort, ARIMA (p,d,q) (P,D,Q)m
-**Identify Baseline Model parameters**
-    - To get baseline parameters impute different set of patterns and identify low best AIC value 
-    - Found: 
 
+#### Identify Baseline Model parameters**
+- To get baseline parameters impute different set of patterns and identify low best AIC value 
+- Results as below: 
 <img src="Images/BaslineResult.png" height="400">
 
-**Manually or with help of statistical analysis:**
+#### Manually or with help of statistical analysis:
 - Autocorelation & Partial Autocorelation
 
 <img src="Images/AutoCorrelation.png" height="400">
 <img src="Images/PartialAutoCorrelation.png" height="400">
 
-**Explanation:**
+#### Explanation:
 - The above plots helps us to identify we have to select AR-K lags or MA
 - ACF plot:
     - As it have exponential decrease or lags1 have correlation with previous lag0.
@@ -203,7 +205,7 @@ Followed below steps:
     - m = 12 (as we are considering Monthly seasonal data)
     
   
-**Train SARIMA Model**
+#### Train SARIMA Model
 - Trained with below mention parameters and its AIC result: 
 - SARIMA(1, 2, 1)x(1, 2, 1, 12) - AIC:376.4879793804362
 - SARIMA(1, 2, 0)x(1, 2, 0, 12) - AIC:416.47908203652696
@@ -211,27 +213,28 @@ Followed below steps:
     - Also, the AIC is good than basline model.
     - Hence, final model is SARIMA(1, 2, 1)x(1, 2, 1, 12) - AIC:376.4879793804362
     
-**Final Model Summary**
+#### Final Model Summary
 
 <img src="Images/ModelSummary.png" height="400">
 
-**Diagonostic plot**
+#### Diagonostic plot
 
 <img src="Images/diagnosticplot.png" height="400">
 
-**Step 3b. Validation SARIMA Model** 
+#### Step 3b. Validation SARIMA Model
 1. First try to predict results for lower end of train data found below prediction.
 
 <img src="Images/trainprediction.png" height="400">
 
-**Explanation:**
+#### Explanation:
     - The line plot is showing the observed/Train values compared to the forecast predictions.
     - Overall, our forecasts align with the true values very well:
     - Showing an downtrend trend starts from the beginning of the year 2018 and
     - After mid of year again as per seasonality move upward in the same direction.
     - Hence our model is forecasing good results
 
-**2. Calculate Metrics / Results**
+### 2. Calculate Metrics / Results
+
 **MSE:**
     - The Mean Squared Error (MSE) of our forecasts is 191.98
     - The mean squared error (MSE) of an estimator measures the average of the squares of the errors i.e., the AVG Squared difference between the estimated values and forecasted/estimated. 
@@ -242,7 +245,7 @@ Followed below steps:
     - The daily electricity demand range from around 203 to over 374 GW. 
     - Overall this is a pretty good model so far.
 
-**Step 4. Forecasting and Validate with Test data**
+## Step 4. Forecasting and Validate with Test data
 - Validate Test Data
 
 <img src="Images/testprediction.png" height="400">
@@ -251,7 +254,7 @@ Followed below steps:
 
 <img src="Images/testwithfutureprediction.png" height="400">
 
-**Conclusion**
+## Conclusion
 - Our model clearly captured Electricity demand tend & seasonality.
 - As we forecast further out into the future, it follows the original Downtrend as well as seasonality pattern.
 
