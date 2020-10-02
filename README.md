@@ -42,9 +42,9 @@ The purpose of this project consist two parts:
 
 ## Project Explanation:
 
-#### Part A. Time Series Analysis and Forecasting using Seasonal Arima Model. 
+## ----------------------- Part A. Time Series Analysis and Forecasting using Seasonal Arima Model. --------------------------- 
 
-##### Data Discover:
+## Data Discover:
 1. Loading Dataset
 * **Dataset 1: National Grid Dataset** 
     - Features used: 
@@ -255,8 +255,95 @@ Followed below steps:
 
 <img src="Images/testwithfutureprediction.png" height="400">
 
-## Conclusion
+## Part A Conclusion
 - Our model clearly captured Electricity demand tend & seasonality.
 - As we forecast further out into the future, it follows the original Downtrend as well as seasonality pattern.
 
 
+## ----------------------- Part B. ANOMALY DETECTION. --------------------------- 
+
+### Description/Introduction:
+- The main goal is to detect Anomalies in Time Series. 
+- Using Neural Network concept using Tensor Keras - LSTM AutoEncoder Decoder Model.
+
+### Consist Following Steps
+#### Step 1. : Import necessary libraries & Data
+* **Import All required libraries** 
+- Numpy, pandas, matplotlib, plotly, Tensorflow 2.3.1, Keras
+
+* **Dataset: National Grid Dataset** 
+- Features used: 
+    - **TimeStamp:**  Date from 1/06/2011 to 24/09/2020 (includes daily data with 5 mins of equal interval of time).
+    - **Demand:** Sum of Demand recorded by Central Montioring Meters for 5 mins of interval. Actual demand is may higher as those met by embeded technology like small wind turbines and domestic solar panels. (solar power not included)
+
+### Step 2. : Prepare data
+- Clean & Transform data same as done above.
+- For anomaly detection used daily electricity demand data.
+
+### Step 3. : Data Preprocessing
+
+### Important step in Anomaly detection.
+-   Split data into train and test set - 80:20 ratio i.e
+    - approximately Train data from 2012 to 2018 &
+    - Test Data from 2019 to 2020
+
+### Standardizing our target vector by removing the mean and scaling it to unit variance.
+- Scale data between 0 to 1 to minimize the complexity of data .
+- Create the instance of StandarsScaler function and then fit this helper function on the training set and then transform the Train and Test set.
+
+### Subsequencing:
+- Time series data, we need to create the subsequences before we go to using the data to train our model. 
+- We can create sequences with a specific time step in our case 30 (daily data). 
+- That means we need to create the sequences with 30 days for the historical data.
+- As required by LSTM network, we need to reshape input data as:
+    - shape and sample by n time_steps by n features. 
+- Here in our case, the n = 1 i.e. one feature.
+
+## Step 4. : Building & Train LSTM Autoencoder Model
+### Following steps:
+- Here, we are going to build an LSTM Autoencoder network and visualize the architecture and data flow.
+- Hence, we are using LSTM autoencoder to detect anomalies.
+
+#### Steps:
+    - First, we need to TRAIN the data with no anomalies.
+    - Then take new data point and try to reconstruct that using an autoencoder.
+    - If the reconstruction error for the new dataset is above some threshold:
+    - Then we are going to label that example/data point as an anomaly.
+    - In the following 2 lines, we have just assigned values from X_train array i.e. (2524, 30, 1)
+
+#### Model Building Explanation
+- Here, we have used the Sequential model from Keras API. Our sample data is 1% which is 2D array and is passed to LSTM as input. The output of the layer is going to be a feature vector of input data.
+
+- LSTM Sequential Encoder Layer Parameters:
+    - Created one LSTM layer with the number of cells to be 128.
+    - Input shape is equal to no. of time_stpes divided by no. of features.
+    - Then we have added the Dropout regularization to 0.2, helps to prevent over-fitting.
+    - Since our network is LSTM, we need to duplicate this vector using RepeatVector.
+    - Purpose is to just replicate the feature vector from the output of LSTM layer 30 times.
+    - LSTM Decoder Layer
+<img src="Images/lstmmodel.png" height="400">
+
+- Now we have mirrored the encoder in reverse fashion i.e. decoder.
+- TimeDistributed function creates a Dense Layer with number of nodes equal to the number of features.
+- The model is compiled finally using adam optimizer function which is gradient descent optimizer.
+
+## Step 5. : Evaluate LSTM Autoencoder Model
+#### Train LSTM model & plot training and validation loss
+<img src="Images/trainvalidationloss.png" height="400">
+
+#### To detect anamoly we calculate mean absolute error on Train data & plot
+<img src="Images/TrainMaeLoss.png" height="400">
+
+#### To test we calculate mean absolute error on Test data & plot
+<img src="Images/TestMaeLoss.png" height="400">
+
+## Step 6. : Detect Anomalies on data
+#### Detect Anomaly on Test Data
+<img src="Images/AnomalyonTest.png" height="400">
+
+#### Plot Anomaly as marker on Test Data Actual Unscaled Values
+<img src="Images/AnomalyonActualValues.png" height="400">
+
+## Part B. Conclusion:
+- As we decrease we here anomalies are less because due this pandameic electricity demand is consistently low.
+- But still as we reduce the threshold size model able to predict consistent anomalies.
