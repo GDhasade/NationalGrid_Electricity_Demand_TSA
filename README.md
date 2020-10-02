@@ -201,7 +201,7 @@ Followed below steps:
     - Hence, p, P = 1 and q,Q=0 or 1 (As we are selecting AR model)
     - Final SARIMA parameters:
     - p, P = 1
-    - d, D = 1 # Because we take 2 time seasonal differencing to make data stationary
+    - d, D = 2 # Because we take 2 time seasonal differencing to make data stationary
     - q, Q = 0/1
     - m = 12 (as we are considering Monthly seasonal data)
     
