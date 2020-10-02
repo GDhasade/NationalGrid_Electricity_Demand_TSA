@@ -48,8 +48,9 @@ The purpose of this project consist two parts:
 1. Loading Dataset
 * **Dataset 1: National Grid Dataset** 
     - Features used: 
-        - ** TimeStamp:**  Date from 1/06/2011 to 24/09/2020 (includes daily data with 5 mins of equal interval of time).
-        - ** Demand: ** Sum of Demand recorded by Central Montioring Meters for 5 mins of interval. Actual demand is may higher as those met by embeded technology like small wind turbines and domestic solar panels. (solar power not included)
+        - **TimeStamp:**  Date from 1/06/2011 to 24/09/2020 (includes daily data with 5 mins of equal interval of time).
+        - **Demand:** Sum of Demand recorded by Central Montioring Meters for 5 mins of interval. Actual demand is may higher as those met by embeded technology like small wind turbines and domestic solar panels. (solar power not included)
+
 * **Dataset 2: Library Holiday**
     - Feature used:
         - Date: Date from 1/06/2011 to 24/09/2020 
@@ -235,15 +236,15 @@ Followed below steps:
 
 ### 2. Calculate Metrics / Results
 
-**MSE:**
-    - The Mean Squared Error (MSE) of our forecasts is 191.98
+#### MSE:
+- The Mean Squared Error (MSE) of our forecasts is 191.98
     - The mean squared error (MSE) of an estimator measures the average of the squares of the errors i.e., the AVG Squared difference between the estimated values and forecasted/estimated. 
     - The MSE is a measure of the quality of an estimator—it is always non-negative, and the smaller the MSE, the closer we are to finding the line of best fit.
 
-**RMSE:**
-    - Root Mean Square Error (RMSE) tells us that our model was able to forecast the average daily Electricity Demand in the Train set within 13.86 of the real demand. 
-    - The daily electricity demand range from around 203 to over 374 GW. 
-    - Overall this is a pretty good model so far.
+#### RMSE:
+- Root Mean Square Error (RMSE) tells us that our model was able to forecast the average daily Electricity Demand in the Train set within 13.86 of the real demand. 
+- The daily electricity demand range from around 203 to over 374 GW. 
+- Overall this is a pretty good model so far.
 
 ## Step 4. Forecasting and Validate with Test data
 - Validate Test Data
