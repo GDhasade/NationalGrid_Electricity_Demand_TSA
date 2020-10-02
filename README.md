@@ -63,15 +63,13 @@ The purpose of this project consist two parts:
 
 3. EDA - Exploratory Data Analysis
 **a. Daily Electricity Demand**
-
-![Screenshot%202020-10-02%20at%2003.02.44.png](attachment:Screenshot%202020-10-02%20at%2003.02.44.png)
+<img src="images/1.png" height="400">
 
 **Analysis:** Found consistent downtrend with constant decrease in magnitude also have seasonal trend too.
 
 **b. Yearly Electricity Demand Trend & Regression Analysis**
-
-![Screenshot%202020-10-02%20at%2003.04.24.png](attachment:Screenshot%202020-10-02%20at%2003.04.24.png)
-![Screenshot%202020-10-02%20at%2003.04.59.png](attachment:Screenshot%202020-10-02%20at%2003.04.59.png)
+<img src="images/YearlyRegression.png" height="400">
+<img src="images/YearlyTrend.png" height="400">
 
 **Analysis:** 
     - Trend: 
@@ -84,8 +82,8 @@ The purpose of this project consist two parts:
 
 **c. Monthly Electricity Demand Trend**
 
-![Screenshot%202020-10-02%20at%2003.09.08.png](attachment:Screenshot%202020-10-02%20at%2003.09.08.png)
-![Screenshot%202020-10-02%20at%2003.09.22.png](attachment:Screenshot%202020-10-02%20at%2003.09.22.png)
+<img src="images/MonthlyTrend.png" height="400">
+<img src="images/MonthlyRegression.png" height="400">
 
 **Analysis:**
     - Trend: 
@@ -96,9 +94,8 @@ The purpose of this project consist two parts:
         - Shows best fit hence indicate constant downtrend in electricity demand with constant decrease in magnitude.
 
 **d. Daily Trend & Identify steep decrease electricity demand in 2018 & 2019**
-
-![Screenshot%202020-10-02%20at%2003.11.58.png](attachment:Screenshot%202020-10-02%20at%2003.11.58.png)
-![Screenshot%202020-10-02%20at%2003.12.24.png](attachment:Screenshot%202020-10-02%20at%2003.12.24.png)
+<img src="images/DailyTrend2018.png" height="400">
+<img src="images/DailyTrend2019.png" height="400">
 
 **Analysis:**
     - There is an seasonal pattern during the year.
@@ -111,8 +108,8 @@ The purpose of this project consist two parts:
 
 **e. Weekly Electricity Demand Trend**
 
-![Screenshot%202020-10-02%20at%2003.15.15.png](attachment:Screenshot%202020-10-02%20at%2003.15.15.png)
-![Screenshot%202020-10-02%20at%2003.15.30.png](attachment:Screenshot%202020-10-02%20at%2003.15.30.png)
+<img src="images/WeeklyTrend.png" height="400">
+<img src="images/WeeklyRegression.png" height="400">
 
 **Analysis:**
     - Trend: 
@@ -123,8 +120,8 @@ The purpose of this project consist two parts:
 
 **f. Holiday Impact on Electiricity Demand**
 
-![Screenshot%202020-10-02%20at%2003.17.51.png](attachment:Screenshot%202020-10-02%20at%2003.17.51.png)
-![Screenshot%202020-10-02%20at%2003.18.18.png](attachment:Screenshot%202020-10-02%20at%2003.18.18.png)
+<img src="images/HolidayImpact2018.png" height="400">
+<img src="images/HolidayImpact2019.png" height="400">
 
 **Explanation:**
     - Try to analyse for 2018 and 2019 data
@@ -137,7 +134,7 @@ The purpose of this project consist two parts:
 ##### DEVELOP:
 
 **1. Data preprocessing -  Outlier Handling**
-![Screenshot%202020-10-02%20at%2003.20.48.png](attachment:Screenshot%202020-10-02%20at%2003.20.48.png)
+<img src="images/OutlierCurve.png" height="400">
 
 **Explanation:**
     - Suspect outliers at both end of box plot.
@@ -154,15 +151,15 @@ The purpose of this project consist two parts:
 
 **2. Statistical Test**
 - To check data is normally distributed or not using - Shapiro-Wilk Test.
-
-![Screenshot%202020-10-02%20at%2003.22.15.png](attachment:Screenshot%202020-10-02%20at%2003.22.15.png)
+<img src="images/WithoutOutlier.png" height="400">
 
 **3. TIME SERIES FORECASTING MODEL**
 Followed below steps:
 
 **Step 1. Time Series Decomposition plot**
     - Allow to identify Seasonality-Trend-Error/Remainder.
-![Screenshot%202020-10-02%20at%2003.25.54.png](attachment:Screenshot%202020-10-02%20at%2003.25.54.png)
+<img src="images/Decomposition.png" height="400">
+
 
 **Step 2. Determine ARIMA terms**
     - Check data is stationary or not:
@@ -170,12 +167,10 @@ Followed below steps:
         - To make it stationary:
             - Took 2 time differencing to make data stationary.
 
-![Screenshot%202020-10-02%20at%2003.27.07.png](attachment:Screenshot%202020-10-02%20at%2003.27.07.png)
-
 **Stationary Data**
 
-![Screenshot%202020-10-02%20at%2003.27.51.png](attachment:Screenshot%202020-10-02%20at%2003.27.51.png)
-![Screenshot%202020-10-02%20at%2003.28.02.png](attachment:Screenshot%202020-10-02%20at%2003.28.02.png)
+<img src="images/diff1sationary.png" height="400">
+<img src="images/diff2stationary.png" height="400">
 
 **Step 3a. Term Identification & Train SARIMA Model**
 - As our data is seasonal so we have to determine seasonal as well as non seasonal parameters - Inshort, ARIMA (p,d,q) (P,D,Q)m
@@ -183,12 +178,13 @@ Followed below steps:
     - To get baseline parameters impute different set of patterns and identify low best AIC value 
     - Found: 
 
-![Screenshot%202020-10-02%20at%2003.30.27.png](attachment:Screenshot%202020-10-02%20at%2003.30.27.png)
+<img src="images/BaslineResult.png" height="400">
 
 **Manually or with help of statistical analysis:**
 - Autocorelation & Partial Autocorelation
 
-![Screenshot%202020-10-02%20at%2003.32.44.png](attachment:Screenshot%202020-10-02%20at%2003.32.44.png)
+<img src="images/AutoCorrelation.png" height="400">
+<img src="images/PartialAutoCorrelation.png" height="400">
 
 **Explanation:**
 - The above plots helps us to identify we have to select AR-K lags or MA
@@ -215,16 +211,16 @@ Followed below steps:
     
 **Final Model Summary**
 
-![Screenshot%202020-10-02%20at%2003.36.40.png](attachment:Screenshot%202020-10-02%20at%2003.36.40.png)
+<img src="images/ModelSummary.png" height="400">
 
 **Diagonostic plot**
 
-![Screenshot%202020-10-02%20at%2003.37.08.png](attachment:Screenshot%202020-10-02%20at%2003.37.08.png)
+<img src="images/diagnosticplot.png" height="400">
 
 **Step 3b. Validation SARIMA Model** 
 1. First try to predict results for lower end of train data found below prediction.
 
-![Screenshot%202020-10-02%20at%2003.38.08.png](attachment:Screenshot%202020-10-02%20at%2003.38.08.png)
+<img src="images/trainprediction.png" height="400">
 
 **Explanation:**
     - The line plot is showing the observed/Train values compared to the forecast predictions.
@@ -247,11 +243,11 @@ Followed below steps:
 **Step 4. Forecasting and Validate with Test data**
 - Validate Test Data
 
-![Screenshot%202020-10-02%20at%2003.40.49.png](attachment:Screenshot%202020-10-02%20at%2003.40.49.png)
+<img src="images/testprediction.png" height="400">
 
 - Validate Test Data along with Future 12 month prediction
 
-![Screenshot%202020-10-02%20at%2003.42.19.png](attachment:Screenshot%202020-10-02%20at%2003.42.19.png)
+<img src="images/testwithfutureprediction.png" height="400">
 
 **Conclusion**
 - Our model clearly captured Electricity demand tend & seasonality.
