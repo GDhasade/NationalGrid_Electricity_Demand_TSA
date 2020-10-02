@@ -63,13 +63,15 @@ The purpose of this project consist two parts:
 
 3. EDA - Exploratory Data Analysis
 **a. Daily Electricity Demand**
-<img src="images/1.png" height="400"/>
+
+<img src="Images/1.png" height="400"/>
 
 **Analysis:** Found consistent downtrend with constant decrease in magnitude also have seasonal trend too.
 
 **b. Yearly Electricity Demand Trend & Regression Analysis**
-<img src="images/YearlyRegression.png" height="400"/>
-<img src="images/YearlyTrend.png" height="400"/>
+
+<img src="Images/YearlyRegression.png" height="400"/>
+<img src="Images/YearlyTrend.png" height="400"/>
 
 **Analysis:** 
     - Trend: 
@@ -82,8 +84,8 @@ The purpose of this project consist two parts:
 
 **c. Monthly Electricity Demand Trend**
 
-<img src="images/MonthlyTrend.png" height="400">
-<img src="images/MonthlyRegression.png" height="400">
+<img src="Images/MonthlyTrend.png" height="400">
+<img src="Images/MonthlyRegression.png" height="400">
 
 **Analysis:**
     - Trend: 
