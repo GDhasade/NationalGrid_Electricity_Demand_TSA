@@ -42,7 +42,7 @@ The purpose of this project consist two parts:
 
 ## Project Explanation:
 
-## ------------- Part A. Time Series Analysis and Forecasting using Seasonal Arima Model. ---------------
+## --- Part A. Time Series Analysis and Forecasting using Seasonal Arima Model. ----
 
 ## Data Discover:
 1. Loading Dataset
