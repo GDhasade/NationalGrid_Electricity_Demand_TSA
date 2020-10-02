@@ -63,7 +63,7 @@ The purpose of this project consist two parts:
 
 3. EDA - Exploratory Data Analysis¶
 **a. Daily Electricity Demand**
-- ![Screenshot%202020-10-02%20at%2003.02.44.png](attachment:Screenshot%202020-10-02%20at%2003.02.44.png)
+![Screenshot%202020-10-02%20at%2003.02.44.png](attachment:Screenshot%202020-10-02%20at%2003.02.44.png)
 - **Analysis:** Found consistent downtrend with constant decrease in magnitude also have seasonal trend too.
 
 ** b. Yearly Electricity Demand Trend & Regression Analysis **
@@ -79,9 +79,10 @@ The purpose of this project consist two parts:
     - Regression Line:
         - Regression line shows best fit hence indicate constant downtrend in electricity demand.
 
-**c. Monthly Electricity Demand Trend **
+**c. Monthly Electricity Demand Trend**
 ![Screenshot%202020-10-02%20at%2003.09.08.png](attachment:Screenshot%202020-10-02%20at%2003.09.08.png)
 ![Screenshot%202020-10-02%20at%2003.09.22.png](attachment:Screenshot%202020-10-02%20at%2003.09.22.png)
+
 **Analysis:**
     - Trend: 
         - Monthly demand helps to identify clear seasonal pattern.
@@ -90,7 +91,8 @@ The purpose of this project consist two parts:
     - Regression Line:
         - Shows best fit hence indicate constant downtrend in electricity demand with constant decrease in magnitude.
 
-**d. Daily Trend & Identify steep decrease electricity demand in 2018 & 2019 **
+**d. Daily Trend & Identify steep decrease electricity demand in 2018 & 2019**
+
 ![Screenshot%202020-10-02%20at%2003.11.58.png](attachment:Screenshot%202020-10-02%20at%2003.11.58.png)
 ![Screenshot%202020-10-02%20at%2003.12.24.png](attachment:Screenshot%202020-10-02%20at%2003.12.24.png)
 
@@ -143,6 +145,7 @@ The purpose of this project consist two parts:
         - Stats that during month of feb 2012 there is an historic snowfall observed in UK.
         - Also for the whole month electricity demand is consistent.
         - Hence to adjust or handle this outlier we impute the mean/avg demand in whole month.
+
 **2. Statistical Test**
 - To check data is normally distributed or not using - Shapiro-Wilk Test.
 ![Screenshot%202020-10-02%20at%2003.22.15.png](attachment:Screenshot%202020-10-02%20at%2003.22.15.png)
@@ -158,8 +161,10 @@ Followed below steps:
         - Performed Dicky-Fuller statistical test - found data is not stationary.
         - To make it stationary:
             - Took 2 time differencing to make data stationary.
+
 ![Screenshot%202020-10-02%20at%2003.27.07.png](attachment:Screenshot%202020-10-02%20at%2003.27.07.png)
-        - Stationary Data
+
+**Stationary Data**
 ![Screenshot%202020-10-02%20at%2003.27.51.png](attachment:Screenshot%202020-10-02%20at%2003.27.51.png)
 ![Screenshot%202020-10-02%20at%2003.28.02.png](attachment:Screenshot%202020-10-02%20at%2003.28.02.png)
 
@@ -168,10 +173,12 @@ Followed below steps:
 **Identify Baseline Model parameters**
     - To get baseline parameters impute different set of patterns and identify low best AIC value 
     - Found: 
+
 ![Screenshot%202020-10-02%20at%2003.30.27.png](attachment:Screenshot%202020-10-02%20at%2003.30.27.png)
 
 **Manually or with help of statistical analysis:**
 - Autocorelation & Partial Autocorelation
+
 ![Screenshot%202020-10-02%20at%2003.32.44.png](attachment:Screenshot%202020-10-02%20at%2003.32.44.png)
 
 **Explanation:**
@@ -198,13 +205,16 @@ Followed below steps:
     - Hence, final model is SARIMA(1, 2, 1)x(1, 2, 1, 12) - AIC:376.4879793804362
     
 **Final Model Summary**
+
 ![Screenshot%202020-10-02%20at%2003.36.40.png](attachment:Screenshot%202020-10-02%20at%2003.36.40.png)
 
 **Diagonostic plot**
+
 ![Screenshot%202020-10-02%20at%2003.37.08.png](attachment:Screenshot%202020-10-02%20at%2003.37.08.png)
 
 **Step 3b. Validation SARIMA Model** 
 1. First try to predict results for lower end of train data found below prediction.
+
 ![Screenshot%202020-10-02%20at%2003.38.08.png](attachment:Screenshot%202020-10-02%20at%2003.38.08.png)
 
 **Explanation:**
@@ -227,9 +237,11 @@ Followed below steps:
 
 **Step 4. Forecasting and Validate with Test data**
 - Validate Test Data
+
 ![Screenshot%202020-10-02%20at%2003.40.49.png](attachment:Screenshot%202020-10-02%20at%2003.40.49.png)
 
 - Validate Test Data along with Future 12 month prediction
+
 ![Screenshot%202020-10-02%20at%2003.42.19.png](attachment:Screenshot%202020-10-02%20at%2003.42.19.png)
 
 **Conclusion**
