@@ -61,12 +61,15 @@ The purpose of this project consist two parts:
 - Check duplicate values
     - Found 59 duplicate rows (Added/Repeat because of daylight saving time change).
 
-3. EDA - Exploratory Data Analysis¶
+3. EDA - Exploratory Data Analysis
 **a. Daily Electricity Demand**
-![Screenshot%202020-10-02%20at%2003.02.44.png](attachment:Screenshot%202020-10-02%20at%2003.02.44.png)
-- **Analysis:** Found consistent downtrend with constant decrease in magnitude also have seasonal trend too.
 
-** b. Yearly Electricity Demand Trend & Regression Analysis **
+![Screenshot%202020-10-02%20at%2003.02.44.png](attachment:Screenshot%202020-10-02%20at%2003.02.44.png)
+
+**Analysis:** Found consistent downtrend with constant decrease in magnitude also have seasonal trend too.
+
+**b. Yearly Electricity Demand Trend & Regression Analysis**
+
 ![Screenshot%202020-10-02%20at%2003.04.24.png](attachment:Screenshot%202020-10-02%20at%2003.04.24.png)
 ![Screenshot%202020-10-02%20at%2003.04.59.png](attachment:Screenshot%202020-10-02%20at%2003.04.59.png)
 
@@ -80,6 +83,7 @@ The purpose of this project consist two parts:
         - Regression line shows best fit hence indicate constant downtrend in electricity demand.
 
 **c. Monthly Electricity Demand Trend**
+
 ![Screenshot%202020-10-02%20at%2003.09.08.png](attachment:Screenshot%202020-10-02%20at%2003.09.08.png)
 ![Screenshot%202020-10-02%20at%2003.09.22.png](attachment:Screenshot%202020-10-02%20at%2003.09.22.png)
 
@@ -105,7 +109,8 @@ The purpose of this project consist two parts:
     - **In 2018:**
         - No news available why electircity demand less on that day.
 
-**e. Weekly Electricity Demand Trend **
+**e. Weekly Electricity Demand Trend**
+
 ![Screenshot%202020-10-02%20at%2003.15.15.png](attachment:Screenshot%202020-10-02%20at%2003.15.15.png)
 ![Screenshot%202020-10-02%20at%2003.15.30.png](attachment:Screenshot%202020-10-02%20at%2003.15.30.png)
 
@@ -116,7 +121,8 @@ The purpose of this project consist two parts:
     - Regression Line:
         - Shows best fit hence indicate constant downtrend in electricity demand with constant decrease in magnitude.
 
-**f. Holiday Impact on Electiricity Demand **
+**f. Holiday Impact on Electiricity Demand**
+
 ![Screenshot%202020-10-02%20at%2003.17.51.png](attachment:Screenshot%202020-10-02%20at%2003.17.51.png)
 ![Screenshot%202020-10-02%20at%2003.18.18.png](attachment:Screenshot%202020-10-02%20at%2003.18.18.png)
 
@@ -148,10 +154,12 @@ The purpose of this project consist two parts:
 
 **2. Statistical Test**
 - To check data is normally distributed or not using - Shapiro-Wilk Test.
+
 ![Screenshot%202020-10-02%20at%2003.22.15.png](attachment:Screenshot%202020-10-02%20at%2003.22.15.png)
 
 **3. TIME SERIES FORECASTING MODEL**
 Followed below steps:
+
 **Step 1. Time Series Decomposition plot**
     - Allow to identify Seasonality-Trend-Error/Remainder.
 ![Screenshot%202020-10-02%20at%2003.25.54.png](attachment:Screenshot%202020-10-02%20at%2003.25.54.png)
@@ -165,6 +173,7 @@ Followed below steps:
 ![Screenshot%202020-10-02%20at%2003.27.07.png](attachment:Screenshot%202020-10-02%20at%2003.27.07.png)
 
 **Stationary Data**
+
 ![Screenshot%202020-10-02%20at%2003.27.51.png](attachment:Screenshot%202020-10-02%20at%2003.27.51.png)
 ![Screenshot%202020-10-02%20at%2003.28.02.png](attachment:Screenshot%202020-10-02%20at%2003.28.02.png)
 
