@@ -96,8 +96,8 @@ The purpose of this project consist two parts:
         - Shows best fit hence indicate constant downtrend in electricity demand with constant decrease in magnitude.
 
 **d. Daily Trend & Identify steep decrease electricity demand in 2018 & 2019**
-<img src="images/DailyTrend2018.png" height="400">
-<img src="images/DailyTrend2019.png" height="400">
+<img src="Images/DailyTrend2018.png" height="400">
+<img src="Images/DailyTrend2019.png" height="400">
 
 **Analysis:**
     - There is an seasonal pattern during the year.
@@ -110,8 +110,8 @@ The purpose of this project consist two parts:
 
 **e. Weekly Electricity Demand Trend**
 
-<img src="images/WeeklyTrend.png" height="400">
-<img src="images/WeeklyRegression.png" height="400">
+<img src="Images/WeeklyTrend.png" height="400">
+<img src="Images/WeeklyRegression.png" height="400">
 
 **Analysis:**
     - Trend: 
@@ -122,8 +122,8 @@ The purpose of this project consist two parts:
 
 **f. Holiday Impact on Electiricity Demand**
 
-<img src="images/HolidayImpact2018.png" height="400">
-<img src="images/HolidayImpact2019.png" height="400">
+<img src="Images/HolidayImpact2018.png" height="400">
+<img src="Images/HolidayImpact2019.png" height="400">
 
 **Explanation:**
     - Try to analyse for 2018 and 2019 data
@@ -136,7 +136,7 @@ The purpose of this project consist two parts:
 ##### DEVELOP:
 
 **1. Data preprocessing -  Outlier Handling**
-<img src="images/OutlierCurve.png" height="400">
+<img src="Images/OutlierCurve.png" height="400">
 
 **Explanation:**
     - Suspect outliers at both end of box plot.
@@ -153,14 +153,14 @@ The purpose of this project consist two parts:
 
 **2. Statistical Test**
 - To check data is normally distributed or not using - Shapiro-Wilk Test.
-<img src="images/WithoutOutlier.png" height="400">
+<img src="Images/WithoutOutlier.png" height="400">
 
 **3. TIME SERIES FORECASTING MODEL**
 Followed below steps:
 
 **Step 1. Time Series Decomposition plot**
     - Allow to identify Seasonality-Trend-Error/Remainder.
-<img src="images/Decomposition.png" height="400">
+<img src="Images/Decomposition.png" height="400">
 
 
 **Step 2. Determine ARIMA terms**
@@ -171,8 +171,8 @@ Followed below steps:
 
 **Stationary Data**
 
-<img src="images/diff1sationary.png" height="400">
-<img src="images/diff2stationary.png" height="400">
+<img src="Images/diff1sationary.png" height="400">
+<img src="Images/diff2stationary.png" height="400">
 
 **Step 3a. Term Identification & Train SARIMA Model**
 - As our data is seasonal so we have to determine seasonal as well as non seasonal parameters - Inshort, ARIMA (p,d,q) (P,D,Q)m
@@ -180,13 +180,13 @@ Followed below steps:
     - To get baseline parameters impute different set of patterns and identify low best AIC value 
     - Found: 
 
-<img src="images/BaslineResult.png" height="400">
+<img src="Images/BaslineResult.png" height="400">
 
 **Manually or with help of statistical analysis:**
 - Autocorelation & Partial Autocorelation
 
-<img src="images/AutoCorrelation.png" height="400">
-<img src="images/PartialAutoCorrelation.png" height="400">
+<img src="Images/AutoCorrelation.png" height="400">
+<img src="Images/PartialAutoCorrelation.png" height="400">
 
 **Explanation:**
 - The above plots helps us to identify we have to select AR-K lags or MA
@@ -213,16 +213,16 @@ Followed below steps:
     
 **Final Model Summary**
 
-<img src="images/ModelSummary.png" height="400">
+<img src="Images/ModelSummary.png" height="400">
 
 **Diagonostic plot**
 
-<img src="images/diagnosticplot.png" height="400">
+<img src="Images/diagnosticplot.png" height="400">
 
 **Step 3b. Validation SARIMA Model** 
 1. First try to predict results for lower end of train data found below prediction.
 
-<img src="images/trainprediction.png" height="400">
+<img src="Images/trainprediction.png" height="400">
 
 **Explanation:**
     - The line plot is showing the observed/Train values compared to the forecast predictions.
@@ -245,11 +245,11 @@ Followed below steps:
 **Step 4. Forecasting and Validate with Test data**
 - Validate Test Data
 
-<img src="images/testprediction.png" height="400">
+<img src="Images/testprediction.png" height="400">
 
 - Validate Test Data along with Future 12 month prediction
 
-<img src="images/testwithfutureprediction.png" height="400">
+<img src="Images/testwithfutureprediction.png" height="400">
 
 **Conclusion**
 - Our model clearly captured Electricity demand tend & seasonality.
