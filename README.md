@@ -10,10 +10,10 @@ Dataset downloaded from website : http://www.gridwatch.templar.co.uk/
 ## Project Include:
 The purpose of this project consist two parts:
 #### Part A. Time Series Analysis and Forecasting using Seasonal Arima Model. 
-- Code Accessible At: https://github.com/GDhasade/NationalGrid_Electricity_Demand_TSA/blob/master/TS_Analysis_N_G_Data.ipynb
+- Code Accessible At: https://github.com/GDhasade/NationalGrid_Electricity_Demand_TSA/blob/master/Part_A_TS_Analysis_N_G_Data.ipynb
 
 #### Part B. Anomaly Detection
-- Code Accessible At: https://github.com/GDhasade/NationalGrid_Electricity_Demand_TSA/blob/master/Anomaly_Detection.ipynb
+- Code Accessible At: https://github.com/GDhasade/NationalGrid_Electricity_Demand_TSA/blob/master/Part_B_Anomaly_Detection.ipynb
 
 ### Methods Used
 * Data Cleaning & Preparing
