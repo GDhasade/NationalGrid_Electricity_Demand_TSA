@@ -182,6 +182,7 @@ Followed below steps:
 
 #### Identify Baseline Model parameters**
 - To get baseline parameters impute different set of patterns and identify low best AIC value 
+- Akaike Information Criterion (AIC) is a measure of the relative quality of a statistical model for a given set of data.
 - Results as below: 
 <img src="Images/BaslineResult.png" height="400">
 
